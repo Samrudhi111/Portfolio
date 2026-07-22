@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Samrudhi Dube — AI/ML Intern Aspirant</title>
+<meta name="description" content="Portfolio of Samrudhi Dube, IT Engineering student exploring AI/ML and Cybersecurity." />
+
+<!-- Fonts: IBM Plex Sans (display), Inter (body), IBM Plex Mono (data/terminal) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== BACKGROUND NETWORK CANVAS ===================== -->
+  <canvas id="net-canvas"></canvas>
+
+  <!-- ===================== TOP NAV ===================== -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a href="#home" class="brand">
+        <span class="brand__mark">SD</span>
+        <span class="brand__status"><span class="dot"></span>online</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Learning</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn--ghost btn--small" href="assets/Samrudhi_Dube_Resume.pdf" download>
+        <span>Resume</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow"><span class="eyebrow__bracket">[</span> IT Engineering · 3rd Year <span class="eyebrow__bracket">]</span></p>
+
+          <h1 class="hero__title">
+            Samrudhi Dube
+          </h1>
+
+          <div class="hero__role" aria-live="polite">
+            <span class="prompt">$</span>
+            <span id="typed" class="typed"></span><span class="caret">▌</span>
+          </div>
+
+          <p class="hero__desc">
+            I build machine learning models that predict outcomes from data, and I'm training myself
+            to think like the people trying to break the systems that run them. Currently deep in
+            supervised learning, Flask applications, and the fundamentals of network security.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--outline">Get In Touch</a>
+          </div>
+
+          <div class="hero__social">
+            <a href="https://github.com/Samrudhi111" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/samrudhi-dube-308a32367" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM3.4 8.75h3.08V21H3.4V8.75Zm5.6 0h2.95v1.68h.04c.41-.78 1.42-1.6 2.93-1.6 3.13 0 3.71 2.06 3.71 4.74V21h-3.07v-5.85c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V21H9V8.75Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="graph-frame">
+            <div class="graph-frame__label">
+              <span>network_topology.live</span>
+            </div>
+            <svg id="hero-svg" viewBox="0 0 480 480" class="hero-svg"></svg>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll down">
+        <span>scroll</span>
+        <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><rect x="1" y="1" width="12" height="18" rx="6" stroke="currentColor" stroke-width="1.2"/><circle class="scroll-cue__dot" cx="7" cy="6" r="1.6" fill="currentColor"/></svg>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="section__head">
+        <p class="eyebrow">About</p>
+        <h2>Where data science meets defensive thinking</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__text">
+          <p>
+            I'm Samrudhi Dube, a third-year Information Technology engineering student with a strong
+            academic record and a growing focus on Artificial Intelligence and Machine Learning. I enjoy
+            the part of ML that most people skip past: cleaning messy data, choosing the right features,
+            and figuring out why a model is wrong before trusting that it's right.
+          </p>
+          <p>
+            Alongside that, I've started exploring Cybersecurity — networking basics, common attack
+            patterns, and the mindset of securing the same systems I'm learning to build. I think the
+            two disciplines sharpen each other: a model you don't trust and a system you haven't tried
+            to break are both unfinished work.
+          </p>
+
+          <div class="about__facts">
+            <div class="fact">
+              <span class="fact__label">Education</span>
+              <span class="fact__value">B.E. Information Technology, 3rd Year</span>
+            </div>
+            <div class="fact">
+              <span class="fact__label">Focus</span>
+              <span class="fact__value">AI/ML · Cybersecurity Fundamentals</span>
+            </div>
+            <div class="fact">
+              <span class="fact__label">Looking for</span>
+              <span class="fact__value">AI/ML Internship Opportunities</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__card">
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span class="terminal__dot terminal__dot--r"></span>
+              <span class="terminal__dot terminal__dot--y"></span>
+              <span class="terminal__dot terminal__dot--g"></span>
+              <span class="terminal__title">whoami.py</span>
+            </div>
+            <div class="terminal__body">
+<pre><code><span class="tk-kw">class</span> <span class="tk-cl">Student</span>:
+    <span class="tk-fn">def</span> <span class="tk-fn">__init__</span>(self):
+        self.name = <span class="tk-str">"Samrudhi Dube"</span>
+        self.role = <span class="tk-str">"AI/ML Intern Aspirant"</span>
+        self.stack = [<span class="tk-str">"Python"</span>, <span class="tk-str">"Flask"</span>,
+                      <span class="tk-str">"NumPy"</span>, <span class="tk-str">"Pandas"</span>]
+        self.exploring = <span class="tk-str">"Cybersecurity"</span>
+        self.cgpa = <span class="tk-num">"9.07"</span>  <span class="tk-cm"># consistently strong</span>
+
+    <span class="tk-fn">def</span> <span class="tk-fn">mindset</span>(self):
+        <span class="tk-kw">return</span> <span class="tk-str">"build it, then try to break it"</span>
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section section--alt" id="skills">
+      <div class="section__head">
+        <p class="eyebrow">Skills</p>
+        <h2>System readout</h2>
+        <p class="section__sub">A live look at where my hands-on time actually goes.</p>
+      </div>
+
+      <div class="skills__grid">
+
+        <div class="skill-panel">
+          <h3 class="skill-panel__title">Programming &amp; Web</h3>
+          <div class="meter" data-value="85">
+            <div class="meter__row"><span>Python</span><span class="meter__pct">85%</span></div>
+            <div class="meter__track"><div class="meter__fill"></div></div>
+          </div>
+          <div class="meter" data-value="75">
+            <div class="meter__row"><span>HTML / CSS</span><span class="meter__pct">75%</span></div>
+            <div class="meter__track"><div class="meter__fill"></div></div>
+          </div>
+          <div class="meter" data-value="65">
+            <div class="meter__row"><span>JavaScript</span><span class="meter__pct">65%</span></div>
+            <div class="meter__track"><div class="meter__fill"></div></div>
+          </div>
+          <div class="meter" data-value="70">
+            <div class="meter__row"><span>Flask</span><span class="meter__pct">70%</span></div>
+            <div class="meter__track"><div class="meter__fill"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-panel">
+          <h3 class="skill-panel__title">Machine Learning</h3>
+          <div class="meter" data-value="80">
+            <div class="meter__row"><span>Supervised Learning</span><span class="meter__pct">80%</span></div>
+            <div class="meter__track"><div class="meter__fill"></div></div>
+          </div>
+          <div class="meter" data-value="78">
+            <div class="meter__row"><span>Regression Models</span><span class="meter__pct">78%</span></div>
+            <div class="meter__track"><div class="meter__fill"></div></div>
+          </div>
+          <div class="meter" data-value="82">
+            <div class="meter__row"><span>NumPy / Pandas</span><span class="meter__pct">82%</span></div>
+            <div class="meter__track"><div class="meter__fill"></div></div>
+          </div>
+          <div class="meter" data-value="70">
+            <div class="meter__row"><span>Matplotlib</span><span class="meter__pct">70%</span></div>
+            <div class="meter__track"><div class="meter__fill"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-panel">
+          <h3 class="skill-panel__title">Tools</h3>
+          <div class="chip-cloud">
+            <span class="chip">VS Code</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">SQLite</span>
+            <span class="chip">Git</span>
+          </div>
+
+          <h3 class="skill-panel__title skill-panel__title--spaced">
+            Cybersecurity
+            <span class="tag-status">learning</span>
+          </h3>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="section__head">
+        <p class="eyebrow">Projects</p>
+        <h2>Things I've actually built</h2>
+      </div>
+
+      <div class="projects__grid">
+
+        <article class="project-card">
+          <div class="project-card__top">
+            <span class="project-card__tag">Machine Learning</span>
+          </div>
+          <span class="project-status completed">Completed</span>
+          <h3>Student Performance Prediction</h3>
+          <p>
+            A supervised regression model that predicts student performance from demographic and
+            academic categorical features — end to end, from raw data to evaluated predictions.
+          </p>
+          <ul class="project-card__points">
+            <li>Cleaned and encoded categorical demographic + academic data</li>
+            <li>Trained and evaluated regression models on performance outcomes</li>
+            <li>Built entirely in Jupyter Notebook using the Python ML stack</li>
+          </ul>
+          <div class="project-card__stack">
+            <span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" class="link-arrow">View Notebook <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__top">
+            <span class="project-card__tag project-card__tag--web">Full-Stack</span>
+          </div>
+          <span class="project-status in-progress">In Progress</span>
+          <h3>CampusMart</h3>
+          <p>
+            An e-commerce web app built for a campus audience — browsing, cart management, and a
+            responsive interface across devices.
+          </p>
+          <ul class="project-card__points">
+            <li>Product listing with a responsive grid layout</li>
+            <li>Cart system with add / update / remove flows</li>
+            <li>Interface tested across mobile and desktop breakpoints</li>
+          </ul>
+          <div class="project-card__stack">
+            <span>HTML</span><span>CSS</span><span>Python</span><span>SQLite</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/Samrudhi111/campusmart" class="link-arrow">View Code <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== LEARNING JOURNEY ===================== -->
+    <section class="section section--alt" id="journey">
+      <div class="section__head">
+        <p class="eyebrow">Learning Journey</p>
+        <h2>Currently in progress: Cybersecurity</h2>
+        <p class="section__sub">I'm early in this path and learning in the open, on purpose.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__line"></div>
+
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card">
+            <span class="timeline__stage">Foundation</span>
+            <h3>Networking Basics</h3>
+            <p>Working through core networking concepts — how data actually moves before I try to reason about how it's attacked.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card">
+            <span class="timeline__stage">In Progress</span>
+            <h3>Security Fundamentals</h3>
+            <p>Studying core security concepts: threats, vulnerabilities, and the principles behind defending a system rather than just building one.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__marker timeline__marker--next"></div>
+          <div class="timeline__card timeline__card--next">
+            <span class="timeline__stage">Next</span>
+            <h3>Applied Security + ML</h3>
+            <p>Long-term goal: bring an ML lens to security problems — using data-driven methods to reason about anomalies and threats.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS ===================== -->
+    <section class="section" id="achievements">
+      <div class="section__head">
+        <p class="eyebrow">Achievements</p>
+        <h2>Milestones so far</h2>
+      </div>
+
+      <div class="achieve__grid">
+        <div class="achieve-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87L18.2 21 12 17.27 5.8 21 7 14.14l-5-4.87 7.1-1.01L12 2z" stroke-linejoin="round"/></svg>
+          <h3>9.07 CGPA</h3>
+          <p>Consistently strong academic performance throughout the IT Engineering program.</p>
+        </div>
+        <div class="achieve-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a4 4 0 0 1 4 4v2h1a2 2 0 0 1 2 2c0 2.5-2 4.5-4.5 4.7A4.98 4.98 0 0 1 13 16.9V19h2v2H9v-2h2v-2.1a4.98 4.98 0 0 1-1.5-2.2C7 14.5 5 12.5 5 10a2 2 0 0 1 2-2h1V6a4 4 0 0 1 4-4Z"/></svg>
+          <h3>Hackathon Participation</h3>
+          <p>Competed in hackathons and technical competitions, building under real time constraints.</p>
+        </div>
+        <div class="achieve-card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>
+          <h3>Online Certifications</h3>
+          <p>Completed certifications relevant to AI/ML and core computer science fundamentals.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+      <div class="section__head">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's talk</h2>
+        <p class="section__sub">Open to AI/ML internship opportunities — reach out any time.</p>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__info">
+          <a class="contact__row" href="mailto:samrudhidube106@gmail.com">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4V4Z"/><path d="M4 6l8 7 8-7"/></svg>
+            <span>samrudhidube106@gmail.com</span>
+          </a>
+          <a class="contact__row" href="https://github.com/Samrudhi111" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+            <span>github.com/Samrudhi111</span>
+          </a>
+          <a class="contact__row" href="https://linkedin.com/in/samrudhi-dube-308a32367" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM3.4 8.75h3.08V21H3.4V8.75Zm5.6 0h2.95v1.68h.04c.41-.78 1.42-1.6 2.93-1.6 3.13 0 3.71 2.06 3.71 4.74V21h-3.07v-5.85c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V21H9V8.75Z"/></svg>
+            <span>linkedin.com/in/samrudhi-dube-308a32367</span>
+          </a>
+
+          <a class="btn btn--outline btn--full" href="assets/Samrudhi_Dube_Resume.pdf" download>
+            Download Resume
+          </a>
+        </div>
+
+        <form class="contact__form" id="contactForm">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell me about the opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            <span>Send Message</span>
+          </button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed &amp; built by Samrudhi Dube · <span id="year"></span></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
