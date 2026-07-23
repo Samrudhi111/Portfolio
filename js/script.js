@@ -70,7 +70,11 @@ if (prefersReducedMotion) {
    Scroll reveal — fades/rises sections into view
 ------------------------------------------------------------------------- */
 const revealTargets = document.querySelectorAll(
+<<<<<<< HEAD
   '.section__head, .about__text, .about__card, .skill-panel, .project-card, .cert-card, .achieve-card, .contact__info, .contact__form'
+=======
+  '.section__head, .about__text, .about__card, .skill-panel, .project-card, .timeline__item, .achieve-card, .contact__info, .contact__form'
+>>>>>>> 850404c971c91b3b9fe6b8f3000d37521595f34b
 );
 revealTargets.forEach(el => el.classList.add('reveal'));
 
